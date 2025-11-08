@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <style>
+
+    @keyframes shake1 {
+        0%  { transform: scale(1); }
+        50% { transform: scale(1.06); }
+        100%{ transform: scale(1); }
+    }
+    keyframes shake2 {
+        0%  {opacity: 1;}
+        50% {opacity: 0.5;}
+        100%{opacity: 1;}
+    }
+    p#a {animation: shake1 1.5s infinite ease-in-out; }
+    h1 {animation: shake2 1s infinite ease-in-out; }
+
+    body {background-image: url(https://img.shetu66.com/2023/10/13/1697206411568055.png);
+        margin: 0;
+        padding: 20px;
+          }
+
+    h1 {text-align: center;
+        font-size: 80px;
+        font-weight: bold;
+        color: rgb(223, 46, 223);
+     text-shadow:
+        -2px -2px 0 #ffe5e5,
+        4px -3px 0 #02ff28,
+        -70px 40px 0 #000000,
+        70px -40px 0 #91129f86;}
+
+    p#a {text-align: center;
+       font-size: 150px;
+    font-weight: bold;
+    line-height: 20px;
+    color: rgb(140, 0, 255);
+    text-shadow:
+        -2px -2px 0 #ffe5e5,
+        4px -3px 0 #02abff,
+        -35px 15px 0 #0b0a0a,
+        0px -0px 0 #91129f86;
+        margin-top: 370px;
+        font-family: "youyuan", sans-serif;
+    }
+
+    p {margin-top: 10px;
+      line-height: 40px;
+      font-size: 100px;
+      font-family: "Comic Sans MS", sans-serif;
+
+    }
+
+    .hidden-content {
+    display: none;
+    margin: -340px auto;
+    padding: 15px;
+    border: 1px solid #ffffff00;
+    background: #e0767600;
+    text-align: center;
+    color: rgb(255, 251, 37);
+    font-size: 140px;
+    font-weight: 500;
+  }
+
+     .opt-container {
+            display: flex;
+            justify-content: center;
+            gap: 100px;
+            margin-top: 50px;
+        }  
+    .image-container {position: relative;}
+    .full-screen-img {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        object-position: center;
+        z-index: 9999;
+        display: none;
+    }
+    .first-img {display: block;}
+
+
+    
+    p#a a {color: #5424e4;}
+    p#a a:hover {color: #00ff73;}
+    p a {color: #ee00ff;
+    text-decoration: none;}
+    p a:hover {color: #00ffff;}
+    </style>
+</head>
+
+
+    <body>
+       <audio id="bgMusic" loop volume="0.3">
+        <source src="https://lf26-music-east.douyinstatic.com/obj/ies-music-hj/7495920705440140091.mp3" type="audio/mpeg">
+       </audio>
+
+         
+
+        <h1><b><em><span class="blink">让我们来玩个游戏吧!</span></em></b></h1>
+        <p id="a">
+            <a href="javascript:;"onclick="
+            document.getElementById('content').style.display='block';
+             this.style.display='none'">
+             开始
+            </a>
+        </p>
+        <!--超链接到题目并隐藏-->>
+        <div id="content" class="hidden-content"><!--content为隐藏内容id-->
+             <p>1+1=?</p>
+             <div style="display:flex;justify-content:center; gap:100px"><!--c,d两段并列居中并含间距-->
+                <p>
+                    <a href="javascript:;" onclick="
+                    document.getElementById('yes1').style.display='block';
+                    document.getElementById('content').style.display='none'">
+                    A.2      
+                    </a>
+                </p><!--A选项-->
+                <p>
+                    <a href="javascript:;" onclick="
+                    document.getElementById('no1').style.display='block';
+                    document.getElementById('content').style.display='none'">
+                    B.too hard   
+                    </a>
+                </p><!--B选项-->
+             </div>
+        </div>
+
+        <div id="yes1" class="hidden-content">
+            <p>2×3=?</p>
+             <div style="display:flex;justify-content:center; gap:100px"><!--c,d两段并列居中并含间距-->
+                <p>
+                    <a href="javascript:;" onclick="
+                    document.getElementById('yes2').style.display='block';
+                    document.getElementById('yes1').style.display='none'">
+                    A.6      
+                    </a>
+                </p><!--A选项-->
+                <p>
+                    <a href="javascript:;" onclick="
+                    document.getElementById('no2').style.display='block';
+                    document.getElementById('yes1').style.display='none'">
+                    B.si~~    
+                    </a>
+                </p><!--B选项-->
+             </div>
+        </div>
+
+        <div id="no1" class="hidden-content">
+            <img src="https://ts3.tc.mm.bing.net/th/id/OIP-C.AnYMDvTI5-szGS015s6ujQAAAA?rs=1&pid=ImgDetMain&o=7&rm=3" id="sharby1">
+             <p>
+            <a href="javascript:;" onclick="
+                document.getElementById('content').style.display='block';
+                document.getElementById('no1').style.display='none'">
+                重做
+            </a>
+             </p>
+        </div>
+
+        <div id="no2" class="hidden-content">
+            <img src="https://ts3.tc.mm.bing.net/th/id/OIP-C.AnYMDvTI5-szGS015s6ujQAAAA?rs=1&pid=ImgDetMain&o=7&rm=3" id="sharby2">
+             <p>
+            <a href="javascript:;" onclick="
+                document.getElementById('yes1').style.display='block';
+                document.getElementById('no2').style.display='none'">
+                重做
+            </a>
+             </p>
+        </div>
+
+         <div id="no3" class="hidden-content">
+            <img src="https://ts3.tc.mm.bing.net/th/id/OIP-C.AnYMDvTI5-szGS015s6ujQAAAA?rs=1&pid=ImgDetMain&o=7&rm=3" id="sharby3">
+             <p>
+            <a href="javascript:;" onclick="
+                document.getElementById('yes2').style.display='block';
+                document.getElementById('no3').style.display='none'">
+                重做
+            </a>
+             </p>
+        </div>    
+
+        
+        <div id="yes2" class="hidden-content">  
+             <p id="b">6×184+5=?</p>
+             <div style="display:flex;justify-content:center; gap:100px"><!--c,d两段并列居中并含间距-->
+                <p>
+                    <a href="javascript:;" onclick="
+                    document.getElementById('yes3').style.display='block';
+                    document.getElementById('yes2').style.display='none';
+                    document.getElementById('bgMusic').play();
+                    startAutoPhotoPlay();">
+                    A.1109   
+                    </a>
+                </p><!--A选项-->
+                <p>
+                    <a href="javascript:;" onclick="
+                    document.getElementById('no3').style.display='block';
+                    document.getElementById('yes2').style.display='none'">
+                    B.emmmmm  
+                    </a>
+                </p><!--B选项-->
+             </div>
+        </div>
+
+
+        <div id="yes3" class="hidden-content">
+        <img src="https://n.sinaimg.cn/sinakd20109/600/w1920h1080/20221101/6a99-98caeaf2be68524f922b420d460e743e.jpg"
+        class="full-screen-img first-img">
+        <img src="https://n.sinaimg.cn/sinakd20109/600/w1920h1080/20221101/6a99-98caeaf2be68524f922b420d460e743e.jpg"
+        class="full-screen-img second-img">
+        <img src="https://yulu.febdays.com/wp-content/uploads/2021/01/2021-01-30-9-24-0217.jpg"
+        class="full-screen-img third-img">
+        <img src="https://c-ssl.duitang.com/uploads/item/201806/02/20180602112239_kkybn.thumb.1000_0.jpg"
+        class="full-screen-img forth-img">
+        <img src="https://img.shetu66.com/2023/06/30/1688119400176362.png"
+        class="full-screen-img fifth-img">
+        <img src="https://yulu.febdays.com/wp-content/uploads/2021/01/2021-01-30-9-24-0217.jpg"
+        class="full-screen-img sixth-img">
+        <img src="https://img.shetu66.com/2023/12/18/1702903816221055.png"
+        class="full-screen-img seveth-img">
+        <img src="https://cdn.pixabay.com/photo/2012/12/24/08/39/happy-birthday-72159_1280.jpg"
+        class="full-screen-img eighth-img">
+        <img src="https://c-ssl.duitang.com/uploads/blog/202211/05/20221105130919_05437.jpg"
+        class="full-screen-img ninth-img">
+        <img src="https://cdn.pixabay.com/photo/2020/03/05/16/07/happy-birthday-4904779_1280.jpg"
+        class="full-screen-img tenth-img">
+        <img src="https://cdn.pixabay.com/photo/2015/12/30/11/53/birthday-1114056_1280.jpg"
+        class="full-screen-img eve-img">
+        <img src="https://c-ssl.duitang.com/uploads/blog/202304/03/20230403163723_d8a11.jpg"
+        class="full-screen-img twi-img">
+        </div>
+
+        <script>
+    window.onload = function() {
+        const images = document.querySelectorAll('.full-screen-img');
+        let currentIndex = 0;
+        function showNextImage() {
+            if (currentIndex < images.length - 1) {
+                images[currentIndex].style.display = 'none';
+                currentIndex++;
+                images[currentIndex].style.display = 'block';
+            }
+        }
+        const setIntervalId=setInterval(showNextImage, 2000);
+    };
+</script>
+
+    </body>
+
+</html>
